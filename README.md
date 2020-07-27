@@ -1,4 +1,4 @@
-#insall
+# insall
 
 ```
 git clone https://github.com/Phoenix1112/yeni_takeover.git
@@ -6,7 +6,7 @@ cd yeni_takeover
 pip3 install -r requirements.txt
 ```
 
-#usage
+# usage
 
 eğer slack hook adresi ile birlikte kullanılacaksa, takeover.py dosyasını bir editor ile açıp "self.posting_webhook=" adlı değişkene
 slack web hook adresinizi giriniz ve dosyayı kayıt ediniz. Aşağıdaki komut terminalde çıktı vermez. Bu yöntem cron ile birlikte çalışacak şekilde ayarlanmıştır.
