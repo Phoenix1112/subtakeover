@@ -41,5 +41,5 @@ crontab -e
 Scroll down to the bottom line of the page and edit and paste the command below. For this you need to save your slack hook address in the takeover.py file.
 
 ```
-0 */5 * * * cd /path/subtakeover && /usr/bin/python3 /root/subtakeover/takeover.py --list /path/subdomains.txt --thread 50
+0 */5 * * * cd /path/subtakeover && /usr/bin/python3 /path/subtakeover/takeover.py --list /path/subdomains.txt --thread 50
 ```
