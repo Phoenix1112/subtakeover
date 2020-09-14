@@ -1,8 +1,8 @@
 # insall
 
 ```
-git clone https://github.com/Phoenix1112/yeni_takeover.git
-cd yeni_takeover
+git clone https://github.com/Phoenix1112/subtakeover.git
+cd subtakeover
 pip3 install -r requirements.txt
 ```
 
