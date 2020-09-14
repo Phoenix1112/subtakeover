@@ -20,7 +20,7 @@ class SubdomainTakeover():
         self.subdomains = []
         self.blacklist = []
         self.print_lock = threading.Lock()
-        self.posting_webhook = "https://hooks.slack.com/services/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"
+        self.posting_webhook = ""
         self.header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36"}
 
 
