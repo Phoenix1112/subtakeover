@@ -86,6 +86,7 @@ class SubdomainTakeover():
         ("Uh oh. That page doesn't exist.","Intercom"),
         ("is not a registered InCloud YouTrack","JetBrains"),
         ("No Site For Domain","Kinsta"),
+	("The requested URL was not found on this server.","Unbounce"),
         ("It looks like you may have taken a wrong turn somewhere. Don't worry...","LaunchRock"),
         ("Unrecognized domain","Mashery"),
         ("404 error unknown site!","Pantheon"),
