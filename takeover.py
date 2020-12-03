@@ -101,7 +101,7 @@ class SubdomainTakeover():
 
         resolvers_ips = ['1.1.1.1','1.0.0.1','8.8.8.8','8.8.4.4','77.88.8.8','77.88.8.1']
         self.Dnspython_Resolver = dns.resolver.Resolver()
-        self.Dnspython_Resolver.timeout = 5
+        self.Dnspython_Resolver.timeout = 10
         self.Dnspython_Resolver.nameservers = resolvers_ips
 
         if self.posting_webhook:
