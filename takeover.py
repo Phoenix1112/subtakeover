@@ -24,9 +24,7 @@ class SubdomainTakeover():
         self.header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36"}
 
 
-        self.regex = "(.*\.trafficmanager\.net*.|.*\.cloudapp\.net*.|.*\.azure\.com*.|.*\.azurewebsites\.net*.\
-	    |.*\.windows\.net*.|.*\.azure-api\.net*.|.*\.azurehdinsight\.net*.|.*\.azureedge\.net*.|.*\.azurecontainer\.io*.\
-	    |.*\.azuredatalakestore\.net*.|.*\.azurecr\.io*.|.*\.visualstudio\.com*.|.*\.elasticbeanstalk\.com*.)"
+        self.regex = "(.*\.trafficmanager\.net*.|.*\.cloudapp\.net*.|.*\.azure\.com*.|.*\.azurewebsites\.net*.|.*\.windows\.net*.|.*\.azure-api\.net*.|.*\.azurehdinsight\.net*.|.*\.azureedge\.net*.|.*\.azurecontainer\.io*.|.*\.azuredatalakestore\.net*.|.*\.azurecr\.io*.|.*\.visualstudio\.com*.|.*\.elasticbeanstalk\.com*.)"
 
         if args.list and not args.stdin:
 
@@ -35,7 +33,7 @@ class SubdomainTakeover():
                 print(Fore.RED + "Subdomain List Not Found:", args.list)
 
                 sys.exit()
-            
+
             file = open(args.list, "r", encoding="utf-8").read().replace("*.","").replace(".-","").replace("-.","").split("\n")
 
             subs = list(set(filter(None, file)))
@@ -76,18 +74,23 @@ class SubdomainTakeover():
         ("Fastly error: unknown domain","Fastly"),
         ("Repository not found","Bitbucket"),
         ("Trying to access your account?","Campaign Monitor"),
+	("subdomain.cargo.site","Cargo Collective"),
+	("404: This page could not be found.","Gemfury"),
         ("Domain uses DO name serves with no records in DO.","Digitalocean"),
+	("But if you're looking to build your own website","Strikingly"),
         ("The feed has not been found.","Feedpress"),
         ("The thing you were looking for is no longer here, or never was","Ghost"),
         ("404 Blog is not found","HatenaBlog"),
         ("We could not find what you're looking for.","Help Juice"),
         ("No settings were found for this company:","Help Scout"),
         ("No such app","Heroku"),
+	("Non-hub domain, The URL you've accessed does not provide a hub.","uberflip"),
         ("Uh oh. That page doesn't exist.","Intercom"),
         ("is not a registered InCloud YouTrack","JetBrains"),
         ("No Site For Domain","Kinsta"),
-	("The requested URL was not found on this server.","Unbounce"),
+	("Sorry, this page is no longer available","Agile CRM"),
         ("It looks like you may have taken a wrong turn somewhere. Don't worry...","LaunchRock"),
+        ("If this is your website and you've just created it, try refreshing in a minute","Anima"),
         ("Unrecognized domain","Mashery"),
         ("404 error unknown site!","Pantheon"),
         ("Project doesnt exist... yet!","Readme.io"),
@@ -119,7 +122,7 @@ class SubdomainTakeover():
 
         try:
 
-            dns_query = self.Dnspython_Resolver.query(target, "A")
+            dns_query = self.Dnspython_Resolver.resolve(target, "A")
 
             self.request_sender(target)
 
