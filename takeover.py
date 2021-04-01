@@ -24,9 +24,9 @@ class SubdomainTakeover():
         self.header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36"}
 
 
-        self.regex = r".*\.trafficmanager\.net*.|.*\.cloudapp\.net*.|.*\.azure\.com*.|.*\.azurewebsites\.net*.\
+        self.regex = "(.*\.trafficmanager\.net*.|.*\.cloudapp\.net*.|.*\.azure\.com*.|.*\.azurewebsites\.net*.\
 	    |.*\.windows\.net*.|.*\.azure-api\.net*.|.*\.azurehdinsight\.net*.|.*\.azureedge\.net*.|.*\.azurecontainer\.io*.\
-	    |.*\.azuredatalakestore\.net*.|.*\.azurecr\.io*.|.*\.visualstudio\.com*.|.*\.elasticbeanstalk\.com*."
+	    |.*\.azuredatalakestore\.net*.|.*\.azurecr\.io*.|.*\.visualstudio\.com*.|.*\.elasticbeanstalk\.com*.)"
 
         if args.list and not args.stdin:
 
