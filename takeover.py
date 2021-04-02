@@ -84,6 +84,7 @@ class SubdomainTakeover():
         ("We could not find what you're looking for.","Help Juice"),
         ("No settings were found for this company:","Help Scout"),
         ("No such app","Heroku"),
+	("May be this is still fresh!","freshdesk"),
 	("Non-hub domain, The URL you've accessed does not provide a hub.","uberflip"),
         ("Uh oh. That page doesn't exist.","Intercom"),
         ("is not a registered InCloud YouTrack","JetBrains"),
